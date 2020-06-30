@@ -3,6 +3,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from WPR.DBConnector import DBConnector_test
 import time
 class AddVendorAccount_test():
     # To setup driver and launch the application
@@ -13,7 +14,7 @@ class AddVendorAccount_test():
         global updatedSiteOfCare
         global updatedAccountName
         vendorName = "Baxter"
-        accountName = "TestVenMar91"
+        accountName = "TestVenMar911"
         updatedSiteOfCare = "Physician Clinic"
         updatedAccountName = "WAC"
         driver = webdriver.Chrome('P://IT Transformation -Automation//WPR//WPR//ChromeDriver//chromedriver.exe')
@@ -21,14 +22,14 @@ class AddVendorAccount_test():
         driver.maximize_window()
 
         # Open the application
-        #driver.get("http://webqa01:4204/")
-        #driver.get("https://qa-wpr.rxresourcesolutions.com/#/vendorAccount")
         driver.get("https://qa-wpr.rxresourcesolutions.com")
-        #driver.get("https://dev-wpr.rxresourcesolutions.com")
         print(driver.title)
-        time.sleep(7)
-        #driver.find_element_by_xpath("//div[@class = 'table-cell text-left content'][1]").click();
-        time.sleep(2)
+        print("welcome")
+        time.sleep(9)
+
+    #Verify the data in Database
+    def verifyAccountNumberInDatabase(self):
+        return DBConnector_test.fetchVendorAccountNumber(self, accountName)
 
     #To add vendor account
     def test_addVendor(self):
@@ -97,6 +98,10 @@ class AddVendorAccount_test():
         print(accountNameIsPresent)
         return accountNameIsPresent
 
+    #Verify the data in Database
+    def verifyAccountNumberInDatabase(self):
+        return DBConnector_test.fetchVendorAccountNumber(self, accountName)
+
     #To edit Vendor Account
     def test_EditVendor(self):
         # Edit the Account
@@ -104,7 +109,6 @@ class AddVendorAccount_test():
         time.sleep(5)
         editElement = driver.find_elements_by_xpath("//button[contains(@class,'shortButton')]")
         editElement[0].click()
-        #driver.find_element_by_xpath("//button[contains(@class,'shortButton')][1]").click()
 
         # Edit "Account type"
         time.sleep(2)
@@ -144,7 +148,6 @@ class AddVendorAccount_test():
         time.sleep(5)
         driver.find_element_by_xpath("//*[text() = ' "+accountName+" ']/following-sibling::*[6]/button").click()
         time.sleep(5)
-        #deleteElement = driver.find_elements_by_xpath("//button[contains(@class,'shortButton')]")
         deleteElement = driver.find_elements_by_xpath("//button[contains(@class,'shortButton')]")
         deleteElement[1].click()
         time.sleep(2)

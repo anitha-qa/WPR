@@ -51,3 +51,24 @@ class DBConnector_test():
         except Exception as e:
             print ("Exception Occured :", e)
         return cursor.rowcount
+
+    def fetchVendorAccountNumber(self, accountNumber):
+        try:
+            conn = pypyodbc.connect('Driver={SQL Server};'
+                              'Server=SQLQA01;'
+                              'Database=WPR;'
+                              'Trusted_Connection=yes;')
+
+            cursor = conn.cursor()
+            print("DB accNum : "+accountNumber)
+
+            sql_venAcc_query = "select * FROM [WPR].[dbo].[PurchasingVendorAccount] where AccountNumber='"+accountNumber+"'"
+            cursor.execute(sql_venAcc_query)
+
+            for row in cursor:
+                print(row)
+            print(cursor.rowcount)
+
+        except Exception as e:
+            print ("Exception Occured :", e)
+        return cursor.rowcount

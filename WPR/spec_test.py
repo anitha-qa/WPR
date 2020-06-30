@@ -3,47 +3,50 @@ from WPR.AddVendorAccount_test import AddVendorAccount_test
 from WPR.DepartmentTransferTest import department_transfer_test
 from WPR.DailyMetric_test import DailyMetric_test
 from WPR.TransferSiteTest import transferSite_test
-from WPR.DBConnector import DBConnector_test
+
 
 
 class Test_spec():
 
-    #@pytest.mark.p2
+    @pytest.mark.p2
     def test_fileVendorAccount(self):
         global driver
         global vendorName
-        global accountName
+        global accountNumber
         global updatedSiteOfCare
         global updatedAccountName
         vendorName = "Baxter"
-        accountName = "TestVenMar91"
+        accountNumber = "TestVenMar911"
         updatedSiteOfCare = "Physician Clinic"
         updatedAccountName = "WAC"
         AddVendorAccount_test.test_setup(self)
 
+        #To verify data in database
+        assert AddVendorAccount_test.verifyAccountNumberInDatabase(self) == 0
         # To add vendor account
         AddVendorAccount_test.test_addVendor(self)
         print("Add Vendor Assertion")
         # To verify Added Account
-        assert True == AddVendorAccount_test.test_VerifyAddedAccount(self, accountName)
-
+        assert True == AddVendorAccount_test.test_VerifyAddedAccount(self, accountNumber)
+        # To verify data in database
+        assert AddVendorAccount_test.verifyAccountNumberInDatabase(self) != 0
         # To edit Vendor Account
         AddVendorAccount_test.test_EditVendor(self)
         print("Edit Vendor Assertion")
         # To verify Edited Account
-        assert AddVendorAccount_test.test_verifyEditedAccount(self, accountName) == updatedAccountName
+        assert AddVendorAccount_test.test_verifyEditedAccount(self, accountNumber) == updatedAccountName
 
         # To delete vendor account
         AddVendorAccount_test.test_DeleteVendor(self)
         print("Delete Vendor Assertion")
-        print(AddVendorAccount_test.test_verifyDeleteAccount(self, accountName))
+        print(AddVendorAccount_test.test_verifyDeleteAccount(self, accountNumber))
         # To Verify Deleted Account
-        assert False == AddVendorAccount_test.test_verifyDeleteAccount(self, accountName)
+        assert False == AddVendorAccount_test.test_verifyDeleteAccount(self, accountNumber)
 
         AddVendorAccount_test.test_closeWindow(self)
 
 
-    #@pytest.mark.p2
+    @pytest.mark.p2
     def test_DepartmentTransfer(self):
         global warning_message;
         warning_message = 'Another active TransferDepartment is found with same Department Name'
@@ -54,24 +57,18 @@ class Test_spec():
         assert department_transfer_test.Verify_Dupulicate_values(self) == warning_message
         department_transfer_test.test_closeWindow(self)
 
-    #@pytest.mark.p2
+    @pytest.mark.p2
     def test_SiteTransfer(self):
         transferSite_test.Enviornment(self)
         transferSite_test.addTransferSiteManual(self)
         assert transferSite_test.verifySiteInDatabase(self) != 0
         transferSite_test.test_closeWindow(self)
 
-    #@pytest.mark.p2
-    def test_FetchRecored(self):
-        #assert DBConnector_test.fetchDepartment(self,"e2e47034") != 0
-        assert DBConnector_test.fetchSite(self,"e2e70154") != 0
-
     @pytest.mark.p2
     def test_dailyMetric(self):
             global driver
             global primaryMetric
             global secondaryMetric
-            #primaryMetric = "CMI Total Hospital - CMI"
             primaryMetric = "Patient Days (actual - excluding newborns) - PD"
             secondaryMetric = "CMI Total Hospital - CMI"
             DailyMetric_test.test_setup(self)
@@ -81,11 +78,4 @@ class Test_spec():
             assert DailyMetric_test.test_verifySecondaryMetric(self) == secondaryMetric
             DailyMetric_test.test_primaryMetricReset(self)
             DailyMetric_test.test_secondaryMetricReset(self)
-
-            '''DailyMetric_test.test_verifyCustomizePrimaryDescrption(self)
-            assert True == DailyMetric_test.test_verifyAdjustPrimaryMetric(self)
-            assert True == DailyMetric_test.test_verifyPrimaryWithCarveout(self)
-            
-            assert True == DailyMetric_test.test_verifyAdjustSecondaryMetric(self)
-            assert True == DailyMetric_test.test_verifysecondaryWithCarveout(self)
-            DailyMetric_test.test_closeWindow(self)'''
+            DailyMetric_test.test_closeWindow(self)

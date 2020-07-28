@@ -14,6 +14,7 @@ class DailyMetric_test():
         driver.get("https://qa-wpr.rxresourcesolutions.com/")
         print(driver.title)
         print("pullrequest testing1")
+        print("pullrequest testing2")
         time.sleep(15)
 
     def test_primaryMetric(self):

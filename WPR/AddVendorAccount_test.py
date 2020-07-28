@@ -25,7 +25,7 @@ class AddVendorAccount_test():
         driver.get("https://qa-wpr.rxresourcesolutions.com")
         print(driver.title)
         print("welcome")
-        time.sleep(9)
+        time.sleep(15)
 
     #Verify the data in Database
     def verifyAccountNumberInDatabase(self):

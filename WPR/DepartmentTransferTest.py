@@ -33,8 +33,10 @@ class department_transfer_test():
 
         #Open the application
         driver.get("https://qa-wpr.rxresourcesolutions.com/")
+        time.sleep(15)
 
         print(driver.title)
+        print("login Successful")
 
     # Add a transfer department
     def Data_Transfer_Depart(self):

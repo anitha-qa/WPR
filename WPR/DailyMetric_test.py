@@ -13,7 +13,7 @@ class DailyMetric_test():
         # Open the application
         driver.get("https://qa-wpr.rxresourcesolutions.com/")
         print(driver.title)
-        time.sleep(7)
+        time.sleep(15)
 
     def test_primaryMetric(self):
         facility_click = WebDriverWait(driver, 15).until(

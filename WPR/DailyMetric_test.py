@@ -13,6 +13,7 @@ class DailyMetric_test():
         # Open the application
         driver.get("https://qa-wpr.rxresourcesolutions.com/")
         print(driver.title)
+        print("pullrequest testing")
         time.sleep(15)
 
     def test_primaryMetric(self):

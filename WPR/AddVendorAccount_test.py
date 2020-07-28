@@ -25,6 +25,7 @@ class AddVendorAccount_test():
         driver.get("https://qa-wpr.rxresourcesolutions.com")
         print(driver.title)
         print("welcome")
+        print("Tiltle page displays")
         time.sleep(9)
 
     #Verify the data in Database

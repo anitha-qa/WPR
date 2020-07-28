@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81ccf359-4dcb-483f-8b92-d35a8ca7cde3" name="Default Changelist" comment="updated addvendoraccount">
+    <list default="true" id="81ccf359-4dcb-483f-8b92-d35a8ca7cde3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AddVendorAccount_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/AddVendorAccount_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyMetric_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyMetric_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DepartmentTransferTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/DepartmentTransferTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPR- DDT Excel file/DepartmentTransfer.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +15,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="anitha-qa" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="WPR" />
   </component>
   <component name="ProjectId" id="1Y0s3HaYyWJWWXI2f1Rnn3K9Ywc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -170,7 +172,7 @@
       <workItem from="1592820544320" duration="2849000" />
       <workItem from="1593423339638" duration="1214000" />
       <workItem from="1593517701555" duration="1105000" />
-      <workItem from="1595930475947" duration="1013000" />
+      <workItem from="1595930475947" duration="3159000" />
     </task>
     <task id="LOCAL-00001" summary="updated addvendoraccount">
       <created>1593518193406</created>
@@ -179,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593518193406</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated dept transfer file">
+      <created>1595931765293</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595931765293</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +196,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated addvendoraccount" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated addvendoraccount" />
+    <MESSAGE value="updated dept transfer file" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated dept transfer file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1593423904179">
@@ -202,14 +212,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="400" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592825267065" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1595931537790">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1595931762489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595931537790" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595931762489" />
     <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1593424558014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593424558014" />
+    <state x="747" y="477" key="Github.CreatePullRequestDialog" timestamp="1595936182950">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="747" y="477" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595936182950" />
     <state x="830" y="413" key="Github.ShareDialog" timestamp="1593517729635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -230,18 +244,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="670" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592896799842" />
+    <state x="167" y="172" key="MergeDialog" timestamp="1595931931253">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="167" y="172" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595931931253" />
+    <state x="655" y="326" key="MultipleFileMergeDialog" timestamp="1595931931259">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="326" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595931931259" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1593424055024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593424055024" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593518206015">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595931956168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593518206015" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595931956168" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595930681930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595930681930" />
+    <state x="752" y="527" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595935595814">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="527" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595935595814" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1592751000744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

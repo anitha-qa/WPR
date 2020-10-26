@@ -15,7 +15,7 @@ class DBConnector_test():
             #istr= "e2e14865"
             #TransferDepartmentName = istr
             print(TransferDepartmentName)
-            Print(Successful Connection)
+#            Print(Successful Connection)
             #sql_department_query = "select * from [WPR].[dbo].[TransferDepartment] where [TransferDepartmentID]='10083'"
             sql_department_query = "select * from [WPR].[dbo].[TransferDepartment] where [TransferDepartmentName]='"+TransferDepartmentName+"'"
             cursor.execute(sql_department_query)

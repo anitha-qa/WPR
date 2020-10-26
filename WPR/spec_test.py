@@ -5,7 +5,6 @@ from WPR.DailyMetric_test import DailyMetric_test
 from WPR.TransferSiteTest import transferSite_test
 
 
-
 class Test_spec():
 
     @pytest.mark.p2
@@ -21,7 +20,7 @@ class Test_spec():
         updatedAccountName = "WAC"
         AddVendorAccount_test.test_setup(self)
 
-        #To verify data in database
+        # To verify data in database
         assert AddVendorAccount_test.verifyAccountNumberInDatabase(self) == 0
         # To add vendor account
         AddVendorAccount_test.test_addVendor(self)
@@ -45,7 +44,6 @@ class Test_spec():
 
         AddVendorAccount_test.test_closeWindow(self)
 
-
     @pytest.mark.p2
     def test_DepartmentTransfer(self):
         global warning_message;
@@ -64,18 +62,21 @@ class Test_spec():
         assert transferSite_test.verifySiteInDatabase(self) != 0
         transferSite_test.test_closeWindow(self)
 
-    @pytest.mark.p2
-    def test_dailyMetric(self):
-            global driver
-            global primaryMetric
-            global secondaryMetric
-            primaryMetric = "Patient Days (actual - excluding newborns) - PD"
-            secondaryMetric = "CMI Total Hospital - CMI"
-            DailyMetric_test.test_setup(self)
-            DailyMetric_test.test_primaryMetric(self)
-            DailyMetric_test.test_secondaryMetric(self)
-            assert DailyMetric_test.test_verifyPrimaryMetric(self) == primaryMetric
-            assert DailyMetric_test.test_verifySecondaryMetric(self) == secondaryMetric
-            DailyMetric_test.test_primaryMetricReset(self)
-            DailyMetric_test.test_secondaryMetricReset(self)
-            DailyMetric_test.test_closeWindow(self)
+
+@pytest.mark.p2
+
+
+def test_dailyMetric(self):
+    global driver
+    global primaryMetric
+    global secondaryMetric
+    primaryMetric = "Patient Days (actual - excluding newborns) - PD"
+    secondaryMetric = "CMI Total Hospital - CMI"
+    DailyMetric_test.test_setup(self)
+    DailyMetric_test.test_primaryMetric(self)
+    DailyMetric_test.test_secondaryMetric(self)
+    assert DailyMetric_test.test_verifyPrimaryMetric(self) == primaryMetric
+    assert DailyMetric_test.test_verifySecondaryMetric(self) == secondaryMetric
+    DailyMetric_test.test_primaryMetricReset(self)
+    DailyMetric_test.test_secondaryMetricReset(self)
+    DailyMetric_test.test_closeWindow(self)

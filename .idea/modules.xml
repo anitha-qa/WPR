@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CPST/.idea/CPST.iml" filepath="$PROJECT_DIR$/../CPST/.idea/CPST.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Opera/.idea/Opera.iml" filepath="$PROJECT_DIR$/../Opera/.idea/Opera.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/WPR.iml" filepath="$PROJECT_DIR$/.idea/WPR.iml" />
     </modules>
